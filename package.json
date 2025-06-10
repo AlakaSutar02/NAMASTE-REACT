@@ -1,0 +1,22 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "namste react",
+ 
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlakaSutar02/NAMASTE-REACT.git"
+  },
+  "author": "Alaka Sutar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlakaSutar02/NAMASTE-REACT/issues"
+  }, 
+  "homepage": "https://github.com/AlakaSutar02/NAMASTE-REACT#readme",
+  "devDependencies": {
+    "parcel": "^2.15.2"
+  }
+}
