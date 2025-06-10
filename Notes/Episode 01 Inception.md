@@ -84,11 +84,6 @@ By keeping them separate:
 
 * React remains **flexible** and **cross-platform**.
 * Developers can plug in different renderers based on their target environment.
-
----
-
-Here’s a clean, Markdown-ready version of your Q\&A with corrected grammar and added clarity. It's ideal for `README.md` or documentation:
-
 ---
 
 ### ❓ Create and Render a React Element Using Core React (without JSX). Explain it.
