@@ -1,14 +1,7 @@
 
-## 🧱 Laying the Foundation Theory
+## 🧱 Laying the Foundation 
 
 ### ❓ What is JSX?
-
-Here's a well-organized and Markdown-friendly version of your notes about **JSX**—perfect for your `README.md` or study documentation:
-
----
-
-### 🔍 What is JSX?
-
 * JSX stands for **JavaScript XML**.
 * JSX allows writing **HTML-like code inside JavaScript**, which is then **transpiled into JavaScript**.
 ---
