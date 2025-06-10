@@ -55,11 +55,6 @@ React library is the core of React ecosystem where the core react algorithm is w
 - **react.production.js**  
   ➤ Minified and optimized for better performance  
   ➤ Ideal for production deployment
-
----
-
-Here's a cleaner and more accurate version of your answer for use in a `README.md` or technical document:
-
 ---
 
 ### ❓ Why doesn't the React team bundle `react` and `react-dom` together?
