@@ -100,33 +100,7 @@ return (
 They prevent adding unnecessary `<div>` wrappers.
 
 ---
-
-### **6. What is Reconciliation in React?**
-
-**Reconciliation** is the process React uses to **update the DOM efficiently**.
-
-* React maintains a **virtual DOM**.
-* When state/props change, it **compares** the new virtual DOM with the previous one.
-* Only the **differences (diffs)** are updated in the real DOM.
-* This makes updates **faster and more efficient**.
-
----
-
-### **7. What is React Fiber?**
-
-**React Fiber** is the **reconciliation engine** behind React 16+.
-
-**Key features of Fiber:**
-
-* Allows React to **pause, abort, or restart** work as needed.
-* Enables **time-slicing**, **concurrent rendering**, and **better responsiveness**.
-* Helps in prioritizing updates (e.g., animations vs user input).
-
-> It’s a complete rewrite of React's core algorithm.
-
----
-
-### **8. Why do we need keys in React?**
+### **6. Why do we need keys in React?**
 
 **Keys** help React identify which items have changed, been added, or removed in a list.
 
@@ -146,7 +120,7 @@ With keys:
 
 ---
 
-### **9. Can we use index as keys in React?**
+### **7. Can we use index as keys in React?**
 
 **Yes, but only if:**
 
@@ -157,25 +131,71 @@ With keys:
 
 * Using the index can lead to incorrect DOM updates during reordering.
 * It can cause **bugs in component state or animations**.
+---
+
+### ❓ What are Props in React?
+
+**A:** Props are arguments passed into React components. props are used in React to pass data from one component to another (from a parent component to a child component(s)). They are useful when you want the flow of data in your app to be dynamic. 
+---
+
+### ✅ Ways to Use Props in React
+
+1. **Passing Props to a Component**
+
+   ```jsx
+   <Greeting name="Alka" />
+   ```
+
+2. **Accessing Props in the Component**
+
+   ```jsx
+   function Greeting(props) {
+     return <h1>Hello, {props.name}!</h1>;
+   }
+   ```
+
+3. **Destructuring Props**
+
+   ```jsx
+   function Greeting({ name }) {
+     return <h1>Hello, {name}!</h1>;
+   }
+   ```
+
+4. **Using Default Props**
+
+   ```jsx
+   function Button({ label = "Click me" }) {
+     return <button>{label}</button>;
+   }
+   ```
+
+5. **Passing Functions as Props**
+
+   ```jsx
+   function Child({ onClick }) {
+     return <button onClick={onClick}>Click</button>;
+   }
+
+   function Parent() {
+     const handleClick = () => alert("Button clicked!");
+     return <Child onClick={handleClick} />;
+   }
+   ```
+
+6. **Using `children` Prop to Pass JSX Content**
+
+   ```jsx
+   function Wrapper({ children }) {
+     return <div className="wrapper">{children}</div>;
+   }
+
+   <Wrapper>
+     <p>This is wrapped content.</p>
+   </Wrapper>
+   ```
 
 ---
 
-### **10. What is props in React?**
-
-**Props (short for properties)** are **read-only inputs** passed from a parent to a child component.
-
-* They allow **data flow from parent to child**.
-* Props make components **reusable** and **dynamic**.
-
-**Example:**
-
-```jsx
-function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
-}
-
-// Usage
-<Welcome name="Alka" />
-```
 
 ---
