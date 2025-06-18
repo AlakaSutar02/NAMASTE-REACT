@@ -183,6 +183,6 @@ This ensures `useEffect` behaves as expected, without disrupting React’s clean
 - `super(props)` gives access to props in constructor.
 - Avoid marking `useEffect`'s main callback as `async`.
 
-![alt text](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+![React Lifecycle](./React-LifeCycle.png)
 
 ---
