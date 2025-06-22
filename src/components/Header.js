@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 
 import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
-
+import useOnlineStatus from "../utils/useOnlineStatus";
 const Header = () => {
   const [btnName, setbtnNameReact] = useState("Login");
+  const isOnline = useOnlineStatus();
   return (
     <div className="header">
       <div className="logo-container">
@@ -19,9 +20,18 @@ const Header = () => {
             <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/">Contact</Link>
+            <Link to="/contact">Contact</Link>
           </li>
-          <li></li>
+          <li>
+            <Link to="/grocery">Grocery</Link>
+          </li>
+          <li>
+            {isOnline ? (
+              <span className="green">Online</span>
+            ) : (
+              <span className="red">Offline</span>
+            )}
+          </li>
           <button
             className="login-btn"
             onClick={() => {
