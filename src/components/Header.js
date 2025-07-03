@@ -1,11 +1,15 @@
-import { useEffect, useState } from "react";
+import { useState, useContext } from "react";
 
 import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
+
 const Header = () => {
   const [btnName, setbtnNameReact] = useState("Login");
   const isOnline = useOnlineStatus();
+  const { loggedInUser } = useContext(UserContext);
+
   return (
     <div className="flex justify-between shadow-lg p-4">
       <div className="logo-container">
@@ -75,6 +79,7 @@ const Header = () => {
           >
             {btnName}
           </button>
+          <li className="px-4 ">{loggedInUser}</li>
         </ul>
       </div>
     </div>
